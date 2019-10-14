@@ -10,7 +10,7 @@ if (isNaN(level)){
         document.write('&nbsp;');      
     }
 
-    let star = i * 2-1
+    let star = i * 2 - 1
     for(let j=0;j<star;++j){
         document.write('*')
     }
