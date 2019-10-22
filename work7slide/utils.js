@@ -24,28 +24,28 @@ function showLog(logValues, showElement) {
 for (const key in row) {
     let color = pos.indexOf(Number(key)) > -1 ? 'color:red;' : ''
     str += '<span style="font-size:' + row[key] * 20 + 'px;' + color + '">' + row[key] + '</span>'
-    
 }
 showElement.innerHTML = str
     if (pos[0] != -1)
     setTimeout("showLog(logValues,showDiv)",500)
-    }
-
+    
+} 
 function insertSort(str) {
     let arr = str.split(',')
     let nsLog= []
     for (let i = 1;i < arr.length; i++){
         for (let j = i;j > 0; j--){
-            nsLog.push([arr.concat(), [j,j + 1]])
-            nsLog.push([arr.concat(), [j,j + 1]])
-            nsLog.push([arr.concat(), [j,j + 1]])
+            nsLog.push([arr.concat(), [j - 1,j]])
+            nsLog.push([arr.concat(), [j - 1,j]])
+            nsLog.push([arr.concat(), [j - 1,j]])
             if (arr[j - 1] > arr[j]) {
                 [arr[j - 1],arr[j]] = [arr[j], arr[j - 1]]
-             nsLog.push([arr.concat(), [j,j + 1]])
+             nsLog.push([arr.concat(), [j - 1,j]])
             }
         }
     }
     nsLog.push([arr.concat(), [-1,-1]])
+    console.log(nsLog)
 
 return nsLog
 }
@@ -58,9 +58,8 @@ function showLog(logValues, showElement) {
 for (const key in row) {
     let color = pos.indexOf(Number(key)) > -1 ? 'color:red;' : ''
     str += '<span style="font-size:' + row[key] * 20 + 'px;' + color + '">' + row[key] + '</span>'
-    
 }
 showElement.innerHTML = str
     if (pos[0] != -1)
-    setTimeout("showLog(logValues,showDiv)",500)
-    }
+    setTimeout("showLog(logValues,showDiv)",500);
+ }
