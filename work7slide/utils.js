@@ -27,7 +27,9 @@ for (const key in row) {
 }
 showElement.innerHTML = str
     if (pos[0] != -1)
-    setTimeout("showLog(logValues,showDiv)",500)
+    Window.clearTimeout(timer1)
+    timer1 = setTimeout("showLog(logValues,showDiv)",500);
+    
     
 } 
 function insertSort(str) {
