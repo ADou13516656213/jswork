@@ -73,10 +73,10 @@ let classes = [
         ['社工1801']
     ]
 ]
-function createOption(obj,data){
-    for (var i in data){
-        var op = new Option(data[i],i);
-        obj.options.add(op);
+function createOption(duixiang,xuanxiang){
+    for (var i in xuanxiang){
+        var op = new Option(xuanxiang[i],i);
+        duixiang.options.add(op);
     }
 }
 var collegeSelect = document.getElementById('collegeSelect');
