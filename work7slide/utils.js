@@ -27,7 +27,7 @@ for (const key in row) {
 }
 showElement.innerHTML = str
     if (pos[0] != -1)
-    Window.clearTimeout(timer1)
+    clearTimeout(timer1)
     timer1 = setTimeout("showLog(logValues,showDiv)",500);
     
     

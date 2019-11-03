@@ -24,8 +24,7 @@ document.getElementById('monkeyking').innerText = monkey[0]
 function star() {
     let str = document.getElementById("str").value
     let obj = {}
-    var fenge = [];
-    fenge = str.split("")
-
+    let fenge =str.split("").sort()
+    obj = fenge.reduce((ars,d)=>{ars[d]?ars[d]++:ars[d]=1;return ars},{})
     document.getElementById('result').innerText = JSON.stringify(obj)
 }
