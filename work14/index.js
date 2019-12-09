@@ -8,6 +8,7 @@ let id = setInterval(seckill, 1000);
 function seckill(){
     let nowtime = new Date();//获取当前时间
     //获取时间差，单位秒
+    nowtime.getMinutes();
     let remaining = parseInt((endseconds - nowtime.getTime()) / 1000);
     //判断秒杀是否过期
     if(remaining > 0){

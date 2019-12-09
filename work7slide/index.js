@@ -1,4 +1,5 @@
 function sort(method){
+    clearTimeout(c);
     let origin = document.getElementById('origin').value
     let logs
     console.log(method)
@@ -10,5 +11,5 @@ function sort(method){
     showDiv = document.getElementById('Anim')
     logValues = logs.values()
     console.log(logValues.next())
-    c = setTimeout("showLog(logValues,showDiv)",50)
-}
+    var c = setTimeout("showLog(logValues,showDiv)",50)
+} 
