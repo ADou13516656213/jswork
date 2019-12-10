@@ -42,7 +42,7 @@ Cart.prototype = {
      */
     add: function (data) {
         let tmp = this.tmp.cloneNode(true);
-        let item = new Item(tmp,data);
+        let item = new Item(tmp, data);
         let cart = this;
         //勾选
         item.check.onclick = function(){
@@ -56,7 +56,7 @@ Cart.prototype = {
         };
         //减少数量
         item.reduce.onclick = function(){
-            if(item.data.num > 1){
+            if(item.data.num > 1) {
                 item.num.textContent = --item.data.num;
                 item.updateSubtotal();
                 cart.updateTotal();
@@ -85,7 +85,7 @@ this.bottom.before(tmp);
          */
         del: function(item){
             for(let i in this.items){
-                if(this.tiems[i] === item){
+                if(this.items[i] === item){
                     delete this.items[i];
                 }
             }
