@@ -1,4 +1,5 @@
 function animate(obj,option) {  
+    
     clearInterval(obj.timer);//防止多次触发事件，重复开启定时器
    obj.timer = setInterval(function () {
     var flag = true; //元素对象移动的标志，true表示已完成
@@ -15,9 +16,9 @@ function animate(obj,option) {
     }
     if (flag){//移动完成后清楚定时器
         clearInterval(obj.timer);
-       
     }
      },15);
+     
 }
 function getStyle(obj, attr) {  
     if(window.getComputedStyle){//
@@ -29,4 +30,5 @@ function getStyle(obj, attr) {
 var obj = document.getElementById('box');
 obj.onclick = function () {
     animate(obj, {'left':200, 'top':50});
+  
   };
